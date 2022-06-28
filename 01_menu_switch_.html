@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>menu練習</title>
 
 
     <style>
@@ -44,17 +44,21 @@
 
 
         document.getElementById('btn-nav-toggle').addEventListener('click', openNav)
+        let btnNavToggle=document.getElementById('btn-nav-toggle')
+        let primaryNavigation = document.getElementById('primary-navigation')
+        let 
+
         // 函式名稱
         function openNav() {
             console.log('點按鈕打開主導覽')
-            if (document.getElementById('primary-navigation').classList.contains('active') == true) {
+            if (primaryNavigation.classList.contains('active') == true) {
                 // 假如主導覽有active類別時執行
-                document.getElementById('primary-navigation').classList.remove('active')
-                document.getElementById('btn-nav-toggle').textContent = 'menu'
+                primaryNavigation.classList.remove('active')
+                btnNavToggle.textContent = 'menu'
             } else {
                 // 假如主導覽沒有active類別時執行
-                document.getElementById('primary-navigation').classList.add('active')
-                document.getElementById('btn-nav-toggle').textContent = 'X'
+                primaryNavigation.classList.add('active')
+                btnNavToggle.textContent = 'X'
 
             }// openNav if end
 
